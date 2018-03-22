@@ -135,6 +135,20 @@ code {
   }
 }
 
+.Brand {
+  background: white;
+  border-radius: 8px;
+  bottom: 8px;
+  font-size: 16px;
+  padding: 20px;
+  position: fixed;
+  right: 8px;
+  z-index: 3;
+}
+.Brand a {
+  color: black;
+  text-decoration: none;
+}
 
 /* Utilities */
 .tx-300 {
