@@ -8,12 +8,12 @@
 
 /* Settings */
 :root {
-  --AX-delay: 0;
-  --AX-staggerDelay: 200;
-  --AX-duration: 300ms;
-  --AX-timingFunction: ease;
-  --AX-bounce: cubic-bezier(0.680, -0.650, 0.265, 1.650);
-  --AX-elastic: cubic-bezier(0.680, -1.500, 0.265, 2.500);
+  --ax-delay: 0;
+  --ax-staggerDelay: 200;
+  --ax-duration: 300ms;
+  --ax-timingFunction: ease;
+  --ax-bounce: cubic-bezier(0.680, -0.650, 0.265, 1.650);
+  --ax-elastic: cubic-bezier(0.680, -1.500, 0.265, 2.500);
 }
 /* Settings */
 
@@ -23,16 +23,16 @@
 .ax-El,
 .ax-List > * {
   transition-property: all;
-  transition-delay: calc(var(--AX-delay) * 1ms);
-  transition-duration: var(--AX-duration);
-  transition-timing-function: var(--AX-timingFunction);
+  transition-delay: calc(var(--ax-delay) * 1ms);
+  transition-duration: var(--ax-duration);
+  transition-timing-function: var(--ax-timingFunction);
   will-change: opacity, transform;
 }
 
 /* Staggering */
 .ax-List.stagger > * {
   transition-delay: calc(
-    (var(--nIndex) * var(--AX-staggerDelay) + var(--AX-delay)) * 1ms
+    (var(--nIndex) * var(--ax-staggerDelay) + var(--ax-delay)) * 1ms
   );
 }
 
@@ -126,10 +126,10 @@
 
 /* Timing Functions */
 .ax-tf-bounce {
-  transition-timing-function: var(--AX-bounce);
+  transition-timing-function: var(--ax-bounce);
 }
 
 .ax-tf-elastic {
-  transition-timing-function: var(--AX-elastic);
+  transition-timing-function: var(--ax-elastic);
 }
 /* Sequences */
