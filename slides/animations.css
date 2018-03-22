@@ -10,7 +10,7 @@
 :root {
   --ax-delay: 0;
   --ax-staggerDelay: 200;
-  --ax-duration: 300ms;
+  --ax-duration: 300;
   --ax-timingFunction: ease;
   --ax-bounce: cubic-bezier(0.680, -0.650, 0.265, 1.650);
   --ax-elastic: cubic-bezier(0.680, -1.500, 0.265, 2.500);
@@ -24,7 +24,7 @@
 .ax-List > * {
   transition-property: all;
   transition-delay: calc(var(--ax-delay) * 1ms);
-  transition-duration: var(--ax-duration);
+  transition-duration: calc(var(--ax-duration) * 1ms);
   transition-timing-function: var(--ax-timingFunction);
   will-change: opacity, transform;
 }
