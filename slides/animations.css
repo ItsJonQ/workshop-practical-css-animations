@@ -1,0 +1,135 @@
+/* Practical CSS Animations Workshop */
+/* CSS */
+/* Add your CSS style rules here */
+
+
+/* Start writing code here! */
+
+
+/* Settings */
+:root {
+  --AX-delay: 0;
+  --AX-staggerDelay: 200;
+  --AX-duration: 300ms;
+  --AX-timingFunction: ease;
+  --AX-bounce: cubic-bezier(0.680, -0.650, 0.265, 1.650);
+  --AX-elastic: cubic-bezier(0.680, -1.500, 0.265, 2.500);
+}
+/* Settings */
+
+
+
+/* Components */
+.ax-El,
+.ax-List > * {
+  transition-property: all;
+  transition-delay: var(--AX-delay);
+  transition-duration: var(--AX-duration);
+  transition-timing-function: var(--AX-timingFunction);
+  will-change: opacity, transform;
+}
+
+/* Staggering */
+.ax-List.stagger > * {
+  transition-delay: calc(
+    (var(--nIndex) * var(--AX-staggerDelay) + var(--AX-delay)) * 1ms
+  );
+}
+
+* > *:nth-child(1) {
+  --nIndex: 0;
+}
+* > *:nth-child(2) {
+  --nIndex: 1;
+}
+* > *:nth-child(3) {
+  --nIndex: 2;
+}
+* > *:nth-child(4) {
+  --nIndex: 3;
+}
+* > *:nth-child(5) {
+  --nIndex: 4;
+}
+* > *:nth-child(6) {
+  --nIndex: 5;
+}
+* > *:nth-child(7) {
+  --nIndex: 6;
+}
+* > *:nth-child(8) {
+  --nIndex: 7;
+}
+/* Add more as needed! */
+* > *:nth-child(n+9) {
+  --nIndex: 8;
+}
+/* Stops staggering delays when de-activated */
+*:not(.active) > * {
+  --nIndex: 0;
+}
+/* Components */
+
+
+
+/* Sequences */
+.ax-El.ax-fade,
+.ax-List.ax-fade > * {
+  opacity: 0;
+}
+.ax-El.ax-fade.active,
+.ax-List.ax-fade.active > * {
+  opacity: 1;
+}
+
+.ax-El.ax-up,
+.ax-List.ax-up > * {
+  transform: translateY(20%);
+}
+.ax-El.ax-up.active,
+.ax-List.ax-up.active > * {
+  transform: translateY(0);
+}
+
+.ax-El.ax-fadeUp,
+.ax-List.ax-fadeUp > * {
+  opacity: 0;
+  transform: translateY(20%);
+}
+.ax-El.ax-fadeUp.active,
+.ax-List.ax-fadeUp.active > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ax-El.ax-fadeLeft,
+.ax-List.ax-fadeLeft > * {
+  opacity: 0;
+  transform: translateX(20%);
+}
+.ax-El.ax-fadeLeft.active,
+.ax-List.ax-fadeLeft.active > * {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ax-El.ax-fadeRight,
+.ax-List.ax-fadeRight > * {
+  opacity: 0;
+  transform: translateX(-20%);
+}
+.ax-El.ax-fadeRight.active,
+.ax-List.ax-fadeRight.active > * {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Timing Functions */
+.ax-tf-bounce {
+  transition-timing-function: cubic-bezier(0.680, -0.650, 0.265, 1.650);
+}
+
+.ax-tf-elastic {
+  transition-timing-function: cubic-bezier(0.680, -1.500, 0.265, 2.500);
+}
+/* Sequences */

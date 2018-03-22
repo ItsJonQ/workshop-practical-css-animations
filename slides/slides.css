@@ -1,0 +1,142 @@
+/* Practical CSS Animations Workshop */
+/* CSS */
+/* Add your CSS style rules here */
+
+
+/* CSS Normalization code */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+/* CSS Normalization code */
+
+
+/* Start writing code here! */
+html {
+  font-size: 18px;
+}
+@media (min-height: 540px) and (min-width: 680px) {
+  font-size: 24px;
+}
+@media (min-height: 680px) and (min-width: 1140px) {
+  html {
+    font-size: 32px;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1 {font-size: 3.500rem;}
+h2 {font-size: 3.000rem;}
+h3 {font-size: 2.500rem;}
+h4 {font-size: 2.000rem;}
+h5 {font-size: 1.000rem;}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #111;
+  line-height: 1.1;
+  margin: 0 0 0.25em;
+}
+
+code {
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 0.1em;
+  font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+  font-size: 85%;
+  margin: 0;
+  padding: 0.1em 0.3em;
+}
+
+.Slide {
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 30px;
+  overflow-x: hidden;
+}
+.Slide__content {
+  text-align: left;
+  width: 100%;
+}
+@media (min-width: 680px) {
+  .Slide__content {
+    max-width: 60%;
+  }
+}
+
+
+:not(div).ax-List > * {
+  display: inline-block;
+}
+
+
+.Carousel {
+  position: relative;
+  overflow: hidden;
+}
+.Carousel:before,
+.Carousel:after {
+  background: linear-gradient(to right, white, rgba(255, 255, 255, 0.0));
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 30%;
+  z-index: 2;
+}
+.Carousel:after {
+  left: initial;
+  right: -1px;
+  transform: rotate(180deg);
+}
+.Carousel__content {
+  display: flex;
+  margin-left: -20px;
+  margin-right: -20px;
+  position: relative;
+  transition: all 300ms ease;
+  width: calc(100% + 25% + 60px);
+}
+.Carousel__content.play {
+  animation-name: carousel-slide-x;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+}
+.Carousel__content > * {
+  margin: 0 20px;
+}
+.Box {
+  background-color: dodgerblue;
+  border-radius: 8px;
+  height: 100px;
+  width: 25%;
+}
+@keyframes carousel-slide-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc((20%) * -1))
+  }
+}
+
+
+/* Utilities */
+.tx-300 {
+  font-weight: 300;
+}

@@ -1,0 +1,35 @@
+/* Practical CSS Animations Workshop */
+/* CSS */
+/* These styles are not relevant to the animation library. */
+/* They exist to make the page a little prettier :) */
+
+/* CSS Normalization code */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  padding: 20px;
+}
+/* CSS Normalization code */
+
+
+/* Elements */
+div {
+  background: #f5f5f5;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  border-bottom-color: #ccc;
+  color: #444;
+  margin: 2px 0;
+  padding: 10px;
+  text-shadow: 0 1px 0 white;
+}

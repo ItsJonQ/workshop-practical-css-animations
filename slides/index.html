@@ -1,0 +1,219 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <title>Practical CSS Animations</title>
+    <!-- This is your CSS file -->
+    <link rel='stylesheet' href='./animations.css' />
+    <link rel='stylesheet' href='./slides.css' />
+    <style>
+      :root {
+        --AX-duration: 1000ms;
+      }
+    </style>
+  <head>
+  <body>
+
+
+    <!-- ADD HTML HERE: START -->
+    <div class='Slide'>
+      <div class='Slide__content ax-List stagger ax-fadeUp'>
+        <h1 class='ax-List stagger ax-fadeUp'>
+          <span>Practical</span>
+          <span>CSS</span>
+          <span>Animations</span>
+        </h1>
+        <p>By <strong>Q</strong></p>
+      </div>
+    </div>
+
+    <div class='Slide'>
+      <div class='Slide__content ax-List stagger ax-fadeUp'>
+        <h1>About Me</h1>
+        <div class='ax-List stagger ax-fadeLeft'>
+          <p>🤓 I'm a Design Engineer at <a href='https://www.helpscout.com'>Help Scout</a>.</p>
+          <p>🎛 I love CSS.</p>
+          <p>✨ I love animations.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class='Slide'>
+      <div class='Slide__content ax-List stagger ax-fadeUp'>
+        <h2>Workshop Goalz</h2>
+        <div class='ax-List stagger ax-fadeLeft'>
+          <p>🎞 Basic UI animation principles.</p>
+          <p>💪 Build an animation library. From scratch.</p>
+          <p>⚡️ Dynamic animations.</p>
+          <p>🐇 Performance optimizations.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class='Slide'>
+      <div class='Slide__content ax-List stagger ax-fadeUp'>
+        <h3>🎞</h3>
+        <h2>Animation + UI</h2>
+      </div>
+    </div>
+
+    <div class='Slide'>
+      <div class='Slide__content ax-List stagger ax-fadeUp'>
+        <h3>🤔</h3>
+        <h1>Why animate?</h1>
+      </div>
+    </div>
+
+    <div class='Slide'>
+      <div class='Slide__content ax-List stagger ax-fadeUp'>
+        <h2>Animation is</h2>
+        <h2>Communication</h2>
+      </div>
+    </div>
+
+    <div class='Slide'>
+      <div class='Slide__content ax-List stagger ax-fadeUp'>
+        <h2>But also</h2>
+        <h1 class='ax-List stagger ax-fadeUp'>
+          <span class='ax-tf-elastic'>Delight</span>
+          <span class='ax-tf-elastic'>🎉</span>
+        </h1>
+      </div>
+    </div>
+
+    <div class='Slide'>
+      <div class='Slide__content ax-List stagger ax-fadeUp'>
+        <h5>
+          Example: Pagination (Static)
+        </h5>
+        <br />
+        <div class='Carousel'>
+          <div class='Carousel__content'>
+            <div class='Box'></div>
+            <div class='Box'></div>
+            <div class='Box'></div>
+            <div class='Box'></div>
+            <div class='Box'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='Slide'>
+      <div class='Slide__content ax-List stagger ax-fadeUp'>
+        <h5>
+          Example: Pagination (Animated)
+        </h5>
+        <br />
+        <div class='Carousel'>
+          <div class='Carousel__content play'>
+            <div class='Box'></div>
+            <div class='Box'></div>
+            <div class='Box'></div>
+            <div class='Box'></div>
+            <div class='Box'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='Slide'>
+      <div class='Slide__content ax-List stagger ax-fadeUp'>
+        <h4>🗣</h4>
+        <h2 class='ax-List stagger ax-fadeUp'>
+          <span>Communication</span>
+          <br />
+          <span>through</span>
+          <span>motion</span>
+        </h2>
+      </div>
+    </div>
+
+
+    <div class='Slide'>
+      <div class='Slide__content ax-List stagger ax-fadeUp'>
+        <h3>💪</h3>
+        <h2>
+          Building the library
+        </h2>
+      </div>
+    </div>
+
+    <div class='Slide'>
+      <div class='Slide__content ax-List stagger ax-fadeUp'>
+        <h2>
+          The Strategy
+        </h2>
+        <h4 class='ax-List stagger ax-fadeUp'>
+          <span>Isolated</span>
+          <span class='tx-300'>vs</span>
+          <span>Systematic</span>
+        </h4>
+      </div>
+    </div>
+
+    <div class='Slide'>
+      <div class='Slide__content ax-List stagger ax-fadeUp'>
+        <h3>
+          ☝️
+        </h3>
+        <h2>
+          Isolated
+        </h2>
+        <p>💼 Case by case</p>
+        <p>🎉 Easier to start</p>
+        <p>🔥 Scales poorly</p>
+      </div>
+    </div>
+
+
+    <div class='Slide'>
+      <div class='Slide__content ax-List stagger ax-fadeUp'>
+        <h3>
+          🖐
+        </h3>
+        <h2>
+          Systematic
+        </h2>
+        <p>🌎 Affects multiple things</p>
+        <p>🤔 Requires planning to start</p>
+        <p>🎉 Scales wonderfully</p>
+      </div>
+    </div>
+
+
+    <div class='Slide'>
+      <div class='Slide__content ax-List stagger ax-fadeUp'>
+        <h2>
+          The "Parts"
+        </h2>
+        <p>🔸 Components.</p>
+        <p>🎛 Settings.</p>
+        <p>🕹 Sequences.</p>
+      </div>
+    </div>
+
+    <div class='Slide'>
+      <div class='Slide__content ax-List stagger ax-fadeUp'>
+        <h1>
+          Let's
+          <code>code</code>
+        </h1>
+        <p>
+          <a href="https://github.com/ItsJonQ/workshops/tree/master/practical-css-animations">
+            https://github.com/ItsJonQ/workshops/tree/master/practical-css-animations
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+
+    <!-- ADD HTML HERE: END -->
+
+
+
+    <!-- This is your Javascript file -->
+    <script src='./slides.js'></script>
+  </body>
+</html>
