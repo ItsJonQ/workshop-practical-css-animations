@@ -23,7 +23,7 @@
 .ax-El,
 .ax-List > * {
   transition-property: all;
-  transition-delay: var(--AX-delay);
+  transition-delay: calc(var(--AX-delay) * 1ms);
   transition-duration: var(--AX-duration);
   transition-timing-function: var(--AX-timingFunction);
   will-change: opacity, transform;
@@ -126,10 +126,10 @@
 
 /* Timing Functions */
 .ax-tf-bounce {
-  transition-timing-function: cubic-bezier(0.680, -0.650, 0.265, 1.650);
+  transition-timing-function: var(--AX-bounce);
 }
 
 .ax-tf-elastic {
-  transition-timing-function: cubic-bezier(0.680, -1.500, 0.265, 2.500);
+  transition-timing-function: var(--AX-elastic);
 }
 /* Sequences */
